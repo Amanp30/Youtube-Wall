@@ -221,3 +221,24 @@ class Main {
 }
 
 const main = new Main();
+
+const mode = document.getElementById("mode");
+
+function toggleMode() {
+  const darkMode = localStorage.getItem("darkMode") === "true";
+  localStorage.setItem("darkMode", !darkMode);
+  document.documentElement.classList.toggle("dark", !darkMode);
+  mode.innerText = !darkMode ? "Enable Light Mode" : "Enable Dark Mode";
+}
+
+mode.addEventListener("click", toggleMode);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const darkMode = localStorage.getItem("darkMode") === "true";
+  if (darkMode) {
+    document.documentElement.classList.add("dark");
+    mode.innerText = "Enable Light Mode";
+  } else {
+    mode.innerText = "Enable Dark Mode";
+  }
+});
