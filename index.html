@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Wall</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="headbar"><p class="logo">Youtube Wall</p></div>
+    <div class="leftSideBar">
+      <form id="addNewForm">
+        <h2>Add New</h2>
+        <label for="selectNewFile">Select File</label>
+        <input type="file" id="selectNewFile" required accept=".png" />
+        <label for="vdTitle">Video Title</label>
+        <textarea type="text" name="title" id="vdTitle" required> </textarea>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <div class="contentSide">
+      <div class="innerWidth" id="videoIDContainer"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
